@@ -1,17 +1,28 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
+import { AppContainer } from 'react-hot-loader'
+
 
 import App from './App';
 
 export default App
 
-ReactDOM.render(
-    <BrowserRouter>       
-        <Provider store={store}>
-            <App />
-        </Provider>
-    </BrowserRouter>,
-    document.getElementById('root')
-);
+if (typeof document !== 'undefined') {
+    const target = document.getElementById('root')
+  
+    const renderMethod = target.hasChildNodes()
+      ? ReactDOM.hydrate
+      : ReactDOM.render
+  
+    const render = Comp => {
+      renderMethod(
+        <AppContainer>
+          <Comp />
+        </AppContainer>,
+        target
+      )
+    }
+    
+    render(App)
+
+}
