@@ -11,7 +11,7 @@
     "test": "jest",
     "test:watch": "npm run test --watch",
     "test:cover": "npm run test --coverage"
-},
+  },
   "keywords": [],
   "author": "Ashley Ferguson <ashley.ferguson@sjsu.edu> (https://www.npmjs.com/~aferguson17)",
   "license": "ISC",
@@ -46,15 +46,16 @@
     "react-router-dom": "^5.0.1",
     "react-static": "^7.1.0",
     "redux": "^4.0.4",
+    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "styled-components": "^4.3.2"
   },
   "jest": {
     "setupFiles": [
-        "<rootDir>/config/tests/jest.config"
+      "<rootDir>/config/tests/jest.config"
     ],
     "transform": {
-        "^.+\\.js$": "babel-jest"
+      "^.+\\.js$": "babel-jest"
     }
- }
+  }
 }
