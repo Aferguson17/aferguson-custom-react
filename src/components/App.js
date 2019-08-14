@@ -1,5 +1,13 @@
 import React from 'react';
 
-const App = () => <h1>Ferguson Capstone</h1>;
+const App = () => (
+    <Container>
+        <Wrapper>
+            <Title>
+                Ferguson Capstone
+            </Title>
+        </Wrapper>
+    </Container>
+)
 
 export default App;
