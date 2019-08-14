@@ -1,4 +1,5 @@
 import React from 'react';
+import { Root,  } from 'react-static'
 
 function App() {
     return (
@@ -6,9 +7,9 @@ function App() {
             <header className="header">
                 <h1 className="header-title">Ferguson Capstone</h1>
                 <nav className="header-nav">
-                <link>Home</link>
-                <link>About</link>
-                <link>Contact Me</link>
+                <text>Home</text>
+                <text>About</text>
+                <text>Contact Me</text>
                 </nav>
             </header>
 
