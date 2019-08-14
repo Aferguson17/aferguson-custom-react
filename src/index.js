@@ -10,7 +10,7 @@ export default App
 if (typeof document !== 'undefined') {
     const target = document.getElementById('root')
   
-    const renderMethod = target.hasChildNodes()
+    const renderMethod = module.hot
       ? ReactDOM.hydrate
       : ReactDOM.render
   
