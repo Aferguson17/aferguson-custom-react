@@ -1,7 +1,6 @@
 {
     "presets": [
         [
-            "react-static/babel-preset.js",  
             "@babel/preset-env",
             {
                 "useBuiltIns": "entry",

@@ -27,7 +27,11 @@ export default {
       })
 
       return [
-        { path: '/', getData: () => ({posts,}),
+        {
+          path: '/',
+          getData: () => ({
+            posts,
+          }),
           children: posts.map(post => ({
             path: `/post/${post._id}`,
             template: 'src/pages/posts',
