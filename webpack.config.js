@@ -12,3 +12,14 @@ const envs = {
 const env = envs[process.env.NODE_ENV || 'development'];
 const envConfig = require(`./config/webpack/webpack.${env}.babel`);
 module.exports = webpackMerge(common, envConfig);
+
+module.exports = {
+    module: {
+      rules: [
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        },
+      ],
+    },
+  };
